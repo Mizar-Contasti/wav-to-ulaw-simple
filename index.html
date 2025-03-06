@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="emma.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAV to μ-law Converter</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.18.3/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="uk-flex uk-flex-center uk-flex-middle uk-height-viewport">
+        <div class="uk-width-1-2@m uk-width-2-3@s">
+            <div class="uk-card uk-card-default uk-card-body">
+                <h1 class="uk-heading-medium uk-text-center">WAV to μ-law Converter</h1>
+
+                <div class="uk-margin">
+                    <div uk-form-custom="target: true">
+                        <input type="file" id="wavFileInput" accept=".wav">
+                        <button class="uk-button uk-button-default uk-width-1-1" type="button" tabIndex="-1">
+                            <span uk-icon="icon: upload"></span>&nbsp;
+                            <span id="fileName">Select file</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="fileInfo" class="uk-card uk-card-default uk-card-body uk-margin" style="display: none;">
+                    <h2 class="uk-card-title">File Information:</h2> 
+                    <div class="uk-grid-small uk-child-width-1-2@s" uk-grid="true">
+                        <div>
+                            <p>Bit Rate: <span class="uk-text-bold" id="bitRate"></span></p>
+                            <p>Channels: <span class="uk-text-bold" id="channels"></span></p>
+                            <p>Sample Rate: <span class="uk-text-bold" id="sampleRate"></span></p>
+                        </div>
+                        <div>
+                            <p>Sample Size: <span class="uk-text-bold" id="sampleSize"></span></p>
+                            <p>Duration: <span class="uk-text-bold" id="duration"></span></p>
+                            <p>File Size: <span class="uk-text-bold" id="fileSize"></span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="runButton" class="uk-button uk-button-primary uk-margin-right" style="display: none;">
+                    Run Conversion
+                </button>
+
+                <a id="downloadLink" style="display: none;" download="output.wav" class="uk-button uk-button-default">
+                    Download μ-law
+                </a>
+
+              <div id = "player">
+                </div>
+                <div id="message" class="uk-margin"></div>
+                <progress id="progress" class="uk-progress" value="0" max="100"></progress>
+
+                 <p class="uk-text-small uk-text-muted uk-text-center uk-margin-top">
+                        Made by <a href="https://github.com/Mizar-Contasti" target="_blank" rel="noopener noreferrer">Mizar</a> <span id="currentYear"></span>
+                 </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.18.3/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.18.3/dist/js/uikit-icons.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

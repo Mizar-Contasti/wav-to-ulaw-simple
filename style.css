@@ -1,0 +1,63 @@
+/* style.css */
+
+body {
+    /* Set a background color for the entire page */
+    /* background-color: #f0f0f0;  Remove the comment to use */
+}
+
+/* Center the main content container */
+.uk-flex-center {
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center;     /* Vertical centering */
+    min-height: 100vh;     /* Ensure it takes up at least the full viewport height */
+}
+
+/* Style for the main card (optional, adjust as needed) */
+.uk-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Add a subtle shadow */
+    border-radius: 8px; /* Slightly rounded corners */
+    /* Add padding, margins, etc. as you see fit */
+}
+
+/* Style the file input button (optional) */
+.uk-form-custom button {
+    /* Example styles - customize these */
+    background-color: #007bff; /* Blue background */
+    color: white;             /* White text */
+    /* Add padding, border-radius, etc. */
+}
+
+.uk-form-custom button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    /* Other hover styles */
+}
+
+.uk-form-custom button:disabled{
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+/*Style progress bar*/
+.uk-progress::-webkit-progress-value {
+  background-color: #007bff;
+}
+
+.uk-progress::-moz-progress-bar {
+  background-color: #007bff;
+}
+
+.uk-progress {
+  background-color: #f3f3f3;
+}
+/* Style for error messages (optional) */
+#message.error {
+    color: red;
+    font-weight: bold;
+}
+
+/* Custom style for file info. */
+#fileInfo p {
+  margin-bottom: 5px; /* Reduce spacing between info lines */
+}
