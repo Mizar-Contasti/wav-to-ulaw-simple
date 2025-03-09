@@ -288,14 +288,14 @@ runButton.addEventListener('click', async () => {
         combined.set(new Uint8Array(header), 0);
         combined.set(encodedData, header.byteLength);
 
-        const blob = new Blob([combined], { type: 'audio/wav' });
+        const blob = new Blob([combined], { type: 'audio/wav' }); // Keep type as audio/wav
         const url = URL.createObjectURL(blob);
 
         downloadLink.href = url;
-        downloadLink.download = `${originalFileName}.wav`;
+        downloadLink.download = `${originalFileName}.ulaw`; // Change the extension here!
         downloadLink.style.display = 'inline-block';
         messageDiv.textContent = 'Conversion complete!';
-        createAudioPlayer(blob); // Create the audio player
+        createAudioPlayer(blob);
 
     } catch (error) {
         console.error('Error during conversion:', error);
